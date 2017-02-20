@@ -15,9 +15,9 @@
 <div class="main">
 	<div class="left-panel">
 		<label class="timer">Time Left</label>
-		<p class="timer" id="timer"><p/>
+		<p class="timer" id="timer"><b/>
 	</div>
-	<div class="review">
+	<div class="review" id="review1">
 		<table class="status-table">
 			<tr>
 				<th>S.No.</th>
@@ -27,10 +27,17 @@
 			</tr>
 			<script>
 			for(var i=1; i<=17; i++){
-				document.write("<tr><td>" + i + "</td><td><input type='radio' name='rrdb" + i + "' ></td><td><input type='radio' name='drdb" + i + "' ></td><td><input class='qb' type='button' value='Que" + i + "' name='qb" + i + "' ></td></tr>");
+				document.write("<tr><td>" + i + "</td><td><input type='radio' name='rdb" + i + "' ></td><td><input type='radio' name='rdb" + i + "' ></td><td><input class='qb' type='button' value='" + QH_ARRAY[i-1] + "' onclick='hide(this)' ></td></tr>");			
 			}
 			</script>
 		</table>
+	</div>
+	<div class="review" id="review2">
+		<input class="qb" id="bb" type="button" value="<--" onclick="show(this)">
+		<h2 id="qh"> 
+			<script> document.write(); </script> 
+		</h2>
+		<p id="question">The live lab for the lvm lab used gdisk to create the lvm - out of curiosity I used fdisk instead. I used the code 8e for linux lvm. I'm assuming the only difference would be the MBR boot record verses gpt. Is there any difference besides MBR / GPT ? </p>
 	</div>
 </div>
 </body>
