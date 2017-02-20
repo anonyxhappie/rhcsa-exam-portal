@@ -1,0 +1,38 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<link rel="stylesheet" href="css/style.css" />
+<script src="js/main.js"></script>
+</head>
+<body>
+<div class="header">
+		<h1>RHCSA EXAM PORTAL</h1>
+</div>	
+<img id="logo" src="images/redhat.png" alt="RHEL Logo"/>
+<h3 class="label1">CERTIFIED</h3>
+<h3 class="label2">SYSTEM</h3>
+<h3 class="label3">ADMINISTRATOR</h3>
+<div class="main">
+	<div class="left-panel">
+		<label class="timer">Time Left</label>
+		<p class="timer" id="timer"><p/>
+	</div>
+	<div class="review">
+		<table class="status-table">
+			<tr>
+				<th>S.No.</th>
+				<th>Review</th>
+				<th>Done</th>
+				<th>Question</th>
+			</tr>
+			<script>
+			for(var i=1; i<=17; i++){
+				document.write("<tr><td>" + i + "</td><td><input type='radio' name='rrdb" + i + "' ></td><td><input type='radio' name='drdb" + i + "' ></td><td><input class='qb' type='button' value='Que" + i + "' name='qb" + i + "' ></td></tr>");
+			}
+			</script>
+		</table>
+	</div>
+</div>
+</body>
+</html>
+
