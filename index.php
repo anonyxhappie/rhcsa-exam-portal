@@ -1,3 +1,6 @@
+<?php include('php/db_connect.php'); ?>
+<?php include('php/functions.php'); ?>
+<?php  echo "---------------->".single_question("LVM"); all_qheads();  ?>
 <!DOCTYPE HTML>
 <html>
 <head>
@@ -25,21 +28,30 @@
 				<th>Done</th>
 				<th>Question</th>
 			</tr>
+			<form method="GET">			
 			<script>
 			for(var i=1; i<=17; i++){
-				document.write("<tr><td>" + i + "</td><td><input type='radio' name='rdb" + i + "' ></td><td><input type='radio' name='rdb" + i + "' ></td><td><input class='qb' type='button' value='" + QH_ARRAY[i-1] + "' onclick='hide(this)' ></td></tr>");			
+				document.write("<tr><td>" + i + "</td><td><input type='radio' name='rdb" + i + "' ></td><td><input type='radio' name='rdb" + i + "' ></td><td><input class='qb' type='submit' name='qhead' value='" + QH_ARRAY[i-1] + "' onclick='hide(this)' ></td></tr>");			
 			}
 			</script>
+			</form>
 		</table>
 	</div>
 	<div class="review" id="review2">
 		<input class="qb" id="bb" type="button" value="<--" onclick="show(this)">
-		<h2 id="qh"> 
-			<script> document.write(); </script> 
-		</h2>
-		<p id="question">The live lab for the lvm lab used gdisk to create the lvm - out of curiosity I used fdisk instead. I used the code 8e for linux lvm. I'm assuming the only difference would be the MBR boot record verses gpt. Is there any difference besides MBR / GPT ? </p>
+		<?php
+			$qhead = $_GET['qhead'];
+			$sql = "SELECT question FROM questions WHERE q_head='$qhead';";
+			$result = mysqli_query($con, $sql);
+			if (mysqli_num_rows($result) > 0){
+				while($row = mysqli_fetch_assoc($result)){
+					echo "<h2 id='qh'>" . $qhead . "</h2><p id='question'>" . $row['question'] . "</p>"; 
+				}
+			}	
+		?>
 	</div>
 </div>
 </body>
 </html>
+<?php mysqli_close($con); ?>
 

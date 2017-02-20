@@ -1,4 +1,4 @@
-var QH_ARRAY = new Array('A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L', 'M', 'N', 'O', 'P', 'Q');
+var QH_ARRAY = new Array('LVM', 'Quota', 'LDAP', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L', 'M', 'N', 'O', 'P', 'Q');
 var selectedQuestion;
 var countDownDate = new Date("Feb 21, 2017 21:00:00").getTime();
 var x = setInterval(function() {
