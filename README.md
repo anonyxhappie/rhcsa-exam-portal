@@ -1,1 +1,1 @@
-# rhsca-exam-portal
+# rhcsa-exam-portal
