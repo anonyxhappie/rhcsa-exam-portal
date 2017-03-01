@@ -13,11 +13,13 @@ body {background-color: lightyellow; }
 .status-table { position: relative; top: 50px; left: 400px; }
 table, tr, td, th { border: 0px solid black; text-align: center; }
 th, td { padding: 10px 10px; }
-td:nth-child(1),th:nth-child(1){ padding: 0 100px 0 0; }
-td:nth-child(3),th:nth-child(3){ padding: 0 100px 0 0; }
-.qb { border: 1px solid grey; border-radius: 10px; background-color: grey; color: #fff; padding: 1px 35px; opacity: 0.8;}
-.qb:hover { opacity: 1;}
-#bb { padding: 5px 15px; border-radius: 28px 0 0 0; font-size: 20px;}
+.status-table tr th { font-size: 13px; font-weight: lighter; }
+td:nth-child(1),th:nth-child(1){ padding: 0 0 0 0; }
+td:nth-child(3),th:nth-child(3){ padding: 0 0 0 0; }
+.qb { width: 400px; text-align: center; }
+/*.qb { width: 400px; max-width: 400px; border: 1px solid grey; border-radius: 10px; background-color: grey; color: #fff; padding: 1px 35px; opacity: 0.8;}
+*/#bb { padding: 5px 15px; border-radius: 28px 0 0 0; font-size: 20px;}
 #bb, #qh { display: inline; }  
 #qh { padding-left: 400px; }
-#question { display: block; padding: 50px; }
+#question { display: block; padding: 50px; text-align: center;}
+.submit { float: right; padding: 5px; margin: 50px 150px 50px 0; }

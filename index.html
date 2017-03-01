@@ -1,0 +1,47 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<link rel="stylesheet" href="css/style.css" />
+<script src="js/main.js"></script>
+</head>
+<body>
+<div class="header">
+		<h1>RHCSA EXAM PORTAL</h1>
+</div>	
+<img id="logo" src="images/redhat.png" alt="RHEL Logo"/>
+<h3 class="label1">CERTIFIED</h3>
+<h3 class="label2">SYSTEM</h3>
+<h3 class="label3">ADMINISTRATOR</h3>
+<div class="main">
+	<div class="left-panel">
+		<label class="timer">Time Left</label>
+		<p class="timer" id="timer"><b/>
+	</div>
+	<!-- div for first page -->	
+	<div class="review" id="review1">
+		<table class="status-table">
+			<tr>
+				<th>S.No.</th>
+				<th>Revisit</th>
+				<th>Done</th>
+				<th>Question</th>
+			</tr>			
+			<script>
+			for(var i=1; i<=17; i++){
+				document.write("<tr><td>" + i + "</td><td><input type='radio' name='rdb" + i + "' ></td><td><input type='radio' name='rdb" + i + "' ></td><td><button class='qb' id='p" + i + "' onclick='hide(this)'></button></td></tr>");			
+			}
+			</script>
+		</table>
+		<button class="submit" onclick="reboot()">Submit</button>
+	</div>
+
+	<!-- div for next page -->
+	<div class="review" id="review2">
+		<input id="bb" type="button" value="<--" onclick="show(this)">
+		<script>
+			document.write("<h2 id='qh'></h2><p id='question'></p>"); 
+		</script>
+	</div>
+</div>
+</body>
+</html>
