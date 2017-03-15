@@ -37,7 +37,7 @@ function xmlParser(xml){
 /**
 * This module is for the Timer.
 **/
-var countDownDate = new Date("Mar 02, 2017 18:00:00").getTime();
+var countDownDate = new Date("Mar 15, 2017 20:00:00").getTime();
 var x = setInterval(function() {
     var now = new Date().getTime();
     var distance = countDownDate - now;
