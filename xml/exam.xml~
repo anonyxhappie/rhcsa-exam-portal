@@ -8,14 +8,12 @@
 	<qhead id="2">Partitioning</qhead>
 	<question id="2">
 		Create a new 100MB Physical partition mounted under /Gluster
-		(Note because partition sizes are seldom exactly what is specified when they are created,
-		anything within the range of 70MB to 120MB is acceptable)
+		(Note because partition sizes are seldom exactly what is specified when they are created,anything within the range of 70MB to 120MB is acceptable)
 	</question>
 	<qhead id="3">Swap</qhead>
 	<question id="3">
 		Create a new 150MB swap partition f/s.
-		(Note because partition sizes are seldom exactly what is specified when they are created, 
-		anything within the range of 130MB to 170MB is acceptable).
+		(Note because partition sizes are seldom exactly what is specified when they are craeted, anything within the range of 130MB to 170MB is acceptable).
 	</question>
 	<qhead id="4">Yum</qhead>
 	<question id="4">
@@ -27,17 +25,14 @@
 			--> A group named sysgrp
 			--> A user andrew who belongs to sysgrp as a secondary group
 			--> A user susan also belongs to sysgrp as a secondary group
-			--> A user sarah who does not have access to an interactive shell on system 
-			    and who not a member of sysgrp
+			--> A user sarah who does not have access to an interactive shell on system and who not a member of sysgrp
 			--> susan, sarah, andrew password = "Postroll"
 	</question>
 	<qhead id="6">Permissions</qhead>
 	<question id="6">
 		Create a collaborative directory /redhat/sysgrp with the following characteristics:
 			-->Group ownership of /redhat/sysgrpis sysgrp
-			-->The directory should be readable, writeable and accessable to members of sysgrp, 
-    			   but not to any other user.
-			  (It is understood that root has access to all files and directories on the system)
+			-->The directory should be readable, writeable and accessable to members of sysgrp, but not to any other user.(It is understood that root has 				   access to all files and directories on the system.)
 			-->Files created in /redhat/sysgrp automatically have group ownership et to the sysgrp group.
 	</question>
 	<qhead id="7">Kernel</qhead>
@@ -49,8 +44,7 @@
 	</question>
 	<qhead id="8">Crontab</qhead>
 	<question id="8">
-		The user andrew must configure a cron job that runs daily at 14:23 local time and executes 
-		- /bin/echo hello >> /dev/tty1.
+		The user andrew must configure a cron job that runs daily at 14:23 local time and executes - /bin/echo hello >> /dev/tty1.
 	</question>
 	<qhead id="9">LDAP</qhead>
 	<question id="9">
@@ -58,26 +52,18 @@
 		Note the following:
 		-->The LDAP search base DN is dc=example,dc=com
 		-->The LDAP certificate file is http://classroom.example.com/pub/example-ca.crt
-		-->ldapuserX should be able to log into your system, whereX is your ServerX
-		   (hint:where X is your domain number), but will not have a home directory,
-		   untill you have completed the autofs requirement,
-		   below all LDAP users have password of "password".
+		-->ldapuserX should be able to log into your system, whereX is your ServerX((hint:where X is your domain number), but will not have a home directory, 			   untill you have completed the autofs requirement, below all LDAP users have password of "password".
 	</question>
 	<qhead id="10">autofs</qhead>
 	<question id="10">
 		Configure autofs to automount the home directories of LDAP user, Note the following:
-		-->classroom.example.com (172.25.254.25), NFS-exports /home/guests to your system, 
-		   where X is your server number.
+		-->classroom.example.com (172.25.254.25), NFS-exports /home/guests to your system, where X is your server number.
 		-->LDAP userX's home directory is classroom.example.com:/home/guests/ldapuserX
-		-->LdapuserX's home directory should be automated locally beneath 
-		   /home as /home/guests/ldapuserX
+		-->LdapuserX's home directory should be automated locally beneath /home as /home/guests/ldapuserX
 		-->home directories must be writable by their users
-		-->while you are able to login as any of the users ldapuser1 through ldapuser20 
-		   the only home directory that is accessible from your system is ldapuserX.
+		-->while you are able to login as any of the users ldapuser1 through ldapuser20 the only home directory that is accessible from your system is 			   ldapuserX.
 
-		Example:- classroom.example.com would configure the automaster such that ldapuser100's home directory 
-		/home/guests/ldapuserX gets mounted automatically upon login. The NFS share would be 
-		classroom.example.com:/home/guests/ldapuser100.
+		Example:- classroom.example.com would configure the automaster such that ldapuser100's home directory /home/guests/ldapuserX gets mounted 			automatically upon login. The NFS share would be classroom.example.com:/home/guests/ldapuser100.
 	</question>
 	<qhead id="11">NTP</qhead>
 	<question id="11">
@@ -97,8 +83,7 @@
 	<question id="13">
 		Extend the logical volume,logical-data and its filesystem to 400MB
 		Make sure that the filesystem content remains intact
-		(Note: partitions are seldom exactly the size requested,so anything within the 
-		range of 370MB to 430MB is acceptable)
+		(Note: partitions are seldom exactly the size requested,so anything within the range of 370MB to 430MB is acceptable)
 	</question>
 	<qhead id="14">find</qhead>
 	<question id="14">
@@ -109,8 +94,7 @@
 	<question id="15">
 		Sreate a new physical volume,create a new volume group in the name of datacontainer,
 		vgextent is 16.00MB
-		Create a new logical volume in the name of datacopy with the size of 50 extents and 
-		file system must vfat then mount it under /datasource
+		Create a new logical volume in the name of datacopy with the size of 50 extents and file system must vfat then mount it under /datasource
 	</question>
 	<qhead id="16">tar</qhead>
 	<question id="16">

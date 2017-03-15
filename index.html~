@@ -39,7 +39,7 @@
 	<div class="review" id="review2">
 		<input id="bb" type="button" value="<--" onclick="show(this)">
 		<script>
-			document.write("<h2 id='qh'></h2><pre id='question'></pre>"); 
+			document.write("<h2 id='qh'></h2><p id='question'><pre></pre></p>"); 
 		</script>
 	</div>
 </div>

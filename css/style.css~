@@ -21,5 +21,5 @@ td:nth-child(3),th:nth-child(3){ padding: 0 100px 0 0; }
 */#bb { padding: 5px 15px; border-radius: 28px 0 0 0; font-size: 20px;}
 #bb, #qh { display: inline; }  
 #qh { padding-left: 400px; }
-#question { display: block; padding: 50px; text-align:left; font-size:12px;}
+#question { display: block; padding: 50px; text-align:; font-size:12px;}
 .submit { float: right; padding: 5px; margin: 50px 150px 50px 0; }
